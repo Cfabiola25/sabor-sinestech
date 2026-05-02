@@ -52,7 +52,7 @@ const countries: Country[] = [
     soundDescription:
       "Suena a cumbia, vallenato, tambora, marimba del Pacífico, feria, plaza de mercado y café recién servido.",
     soundTags: ["Cumbia", "Vallenato", "Tambora", "Marimba", "Café"],
-    audio: "/src/assets/audio/countries/colombia.mp3",
+    audio: "/audio/countries/colombia.mp3",
   },
   {
     id: "mexico",
@@ -75,7 +75,7 @@ const countries: Country[] = [
     soundDescription:
       "Suena a mariachi, son jarocho, jarabe tapatío, mercado tradicional, comal caliente y celebración popular.",
     soundTags: ["Mariachi", "Son jarocho", "Jarabe", "Comal", "Fiesta"],
-    audio: "/src/assets/audio/countries/mexico.mp3",
+    audio: "/audio/countries/mexico.mp3",
   },
 ];
 
