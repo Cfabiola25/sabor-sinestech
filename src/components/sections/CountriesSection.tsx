@@ -1,4 +1,4 @@
-import { useMemo, useState, type ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import { useAudio } from "../../hooks/useAudio";
 
 import {
@@ -10,7 +10,10 @@ import {
   Sparkles,
   Utensils,
 } from "lucide-react";
+
 import { getDishImage } from "../../utils/getDishImage";
+import colombiaAudio from "../../assets/audio/countries/colombia.mp3";
+import mexicoAudio from "../../assets/audio/countries/mexico.mp3";
 
 type Country = {
   id: string;
@@ -52,7 +55,7 @@ const countries: Country[] = [
     soundDescription:
       "Suena a cumbia, vallenato, tambora, marimba del Pacífico, feria, plaza de mercado y café recién servido.",
     soundTags: ["Cumbia", "Vallenato", "Tambora", "Marimba", "Café"],
-    audio: "/src/assets/audio/countries/colombia.mp3",
+    audio: colombiaAudio,
   },
   {
     id: "mexico",
@@ -75,7 +78,7 @@ const countries: Country[] = [
     soundDescription:
       "Suena a mariachi, son jarocho, jarabe tapatío, mercado tradicional, comal caliente y celebración popular.",
     soundTags: ["Mariachi", "Son jarocho", "Jarabe", "Comal", "Fiesta"],
-    audio: "/src/assets/audio/countries/mexico.mp3",
+    audio: mexicoAudio,
   },
 ];
 
@@ -87,33 +90,26 @@ const CountriesSection = () => {
   const isCurrentCountryPlaying = isPlaying && currentSrc === country.audio;
 
   const nextPage = () => {
+    stop();
     setCurrentPage((prev) => (prev + 1) % countries.length);
   };
 
   const prevPage = () => {
+    stop();
     setCurrentPage((prev) => (prev - 1 + countries.length) % countries.length);
   };
 
+  const goToCountry = (index: number) => {
+    stop();
+    setCurrentPage(index);
+  };
+
   const handleAudioToggle = () => {
-    if (currentSrc === country.audio && isPlaying) {
+    if (isCurrentCountryPlaying) {
       stop();
     } else {
       toggle(country.audio);
     }
-  };
-
-  const speechText = useMemo(() => {
-    return `${country.name}. ${country.subtitle}. ${country.soundDescription}`;
-  }, [country]);
-
-  const listenCountry = () => {
-    if (!("speechSynthesis" in window)) return;
-    window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(speechText);
-    utterance.lang = country.id === "colombia" ? "es-CO" : "es-MX";
-    utterance.rate = 0.9;
-    utterance.pitch = 1;
-    window.speechSynthesis.speak(utterance);
   };
 
   return (
@@ -122,7 +118,7 @@ const CountriesSection = () => {
       className="relative overflow-hidden bg-[#fffaf5] px-4 py-16 md:px-8 lg:py-20"
     >
       <div className="pointer-events-none absolute left-[-120px] top-20 h-72 w-72 rounded-full bg-[#f6c58f]/25 blur-3xl" />
-      <div className="pointer-events-none absolute right-[-120px] bottom-20 h-72 w-72 rounded-full bg-[#c65a32]/10 blur-3xl" />
+      <div className="pointer-events-none absolute bottom-20 right-[-120px] h-72 w-72 rounded-full bg-[#c65a32]/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-[1280px]">
         <div className="mb-10 text-center">
@@ -258,7 +254,7 @@ const CountriesSection = () => {
                 <button
                   key={item.id}
                   type="button"
-                  onClick={() => setCurrentPage(index)}
+                  onClick={() => goToCountry(index)}
                   aria-label={`Ver ${item.name}`}
                   className={`h-3 rounded-full transition-all ${
                     currentPage === index
