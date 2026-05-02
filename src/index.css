@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800;900&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700;6..72,800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100vh;
+    background: #faf6ef;
+    color: #2e1a0e;
+    font-family: "DM Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Newsreader", serif;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font-family: inherit;
+  }
+
+  ::selection {
+    background: rgba(176, 92, 46, 0.22);
+  }
+
+  :focus-visible {
+    outline: 3px solid #b05c2e;
+    outline-offset: 4px;
+  }
+
+  button:disabled,
+  a[aria-disabled="true"] {
+    cursor: not-allowed;
+    opacity: 0.55;
+  }
+}
+
+@layer utilities {
+  .theme-card {
+    @apply border border-[#b05c2e]/10 bg-white text-[#221a17] shadow-sm;
+  }
+}
