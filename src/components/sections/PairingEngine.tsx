@@ -234,18 +234,6 @@ const PairingEngine = () => {
               sabor, emoción, memoria cultural y una atmósfera sonora propia.
             </p>
           </div>
-
-          <div className="rounded-[1.5rem] border border-[#efd4bd] bg-white/75 px-5 py-4 shadow-[0_18px_55px_rgba(91,45,20,0.06)] backdrop-blur">
-            <p className="text-xs font-black uppercase tracking-[0.16em] text-[#b05c2e]">
-              Catálogo conectado
-            </p>
-            <p className="mt-1 font-serif text-3xl font-black text-[#2e1a0e]">
-              {pairingViews.length}
-            </p>
-            <p className="text-sm font-medium text-[#7a5947]">
-              maridajes registrados
-            </p>
-          </div>
         </div>
 
         <div className="mb-8 flex flex-wrap gap-3">
