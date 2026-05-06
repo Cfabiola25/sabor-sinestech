@@ -29,9 +29,6 @@ export const members: Member[] = [
     description:
       "Responsable de la arquitectura visual, el desarrollo frontend, la experiencia de usuario y la integración interactiva de la plataforma SaborSinestech.",
     image: getMemberImage("nelly"),
-    social: {
-      linkedin: "#",
-    },
   },
   {
     id: "m2",
