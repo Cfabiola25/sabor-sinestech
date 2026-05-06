@@ -1,3 +1,11 @@
+const memberImages = import.meta.glob("../assets/images/members/*.webp", {
+  eager: true,
+  import: "default",
+}) as Record<string, string>;
+
+const getMemberImage = (name: string) =>
+  memberImages[`../assets/images/members/${name}.webp`];
+
 export interface Member {
   id: string;
   name: string;
@@ -7,9 +15,7 @@ export interface Member {
   description: string;
   image: string;
   social?: {
-    instagram?: string;
     linkedin?: string;
-    portfolio?: string;
   };
 }
 
@@ -21,11 +27,10 @@ export const members: Member[] = [
     affiliation: "Ingeniería de Software · FESC",
     category: "Desarrollo",
     description:
-      "Responsable de la arquitectura visual, desarrollo frontend, experiencia de usuario e integración interactiva de la plataforma SaborSinestech.",
-    image: "/members/nelly.jpg",
+      "Responsable de la arquitectura visual, el desarrollo frontend, la experiencia de usuario y la integración interactiva de la plataforma SaborSinestech.",
+    image: getMemberImage("nelly"),
     social: {
       linkedin: "#",
-      portfolio: "#",
     },
   },
   {
@@ -35,11 +40,8 @@ export const members: Member[] = [
     affiliation: "Licenciatura en Gastronomía",
     category: "Gastronomía y Maridaje",
     description:
-      "Apoya la investigación de ingredientes, técnicas culinarias y referentes culturales de la cocina mexicana y colombiana.",
-    image: "/members/member-2.jpg",
-    social: {
-      instagram: "#",
-    },
+      "Participó en la investigación comparativa sobre los enfoques de maridaje en México y Colombia, analizando ingredientes tradicionales, bebidas representativas, influencias culturales y diferencias gastronómicas.",
+    image: getMemberImage("dana"),
   },
   {
     id: "m3",
@@ -48,37 +50,28 @@ export const members: Member[] = [
     affiliation: "Licenciatura en Gastronomía",
     category: "Gastronomía y Maridaje",
     description:
-      "Participa en la selección de combinaciones gastronómicas, análisis sensorial y construcción de relaciones entre sabores, texturas y aromas.",
-    image: "/members/member-3.jpg",
-    social: {
-      instagram: "#",
-    },
+      "Realizó un estudio comparativo del maridaje en la cultura mexicana y colombiana, documentando tipos de maridaje, ingredientes, bebidas emblemáticas y factores culturales que influyen en las preferencias gastronómicas.",
+    image: getMemberImage("adriana"),
   },
   {
     id: "m4",
     name: "Marco Antonio Orduño Miranda",
-    role: "Investigadora gastronómica en formación",
+    role: "Investigador gastronómico en formación",
     affiliation: "Licenciatura en Gastronomía",
     category: "Gastronomía y Maridaje",
     description:
-      "Contribuye al análisis del contexto cultural de los platillos, sus regiones de origen y su valor dentro de la identidad alimentaria.",
-    image: "/members/member-4.jpg",
-    social: {
-      instagram: "#",
-    },
+      "Apoyó el desarrollo del concepto de maridaje México–Colombia mediante la organización de contenidos y la selección de platillos, ingredientes y bebidas representativas de ambos países.",
+    image: getMemberImage("marco"),
   },
   {
     id: "m5",
     name: "Luis Angel Romero Alvarez",
-    role: "Investigadora gastronómica en formación",
+    role: "Investigador gastronómico en formación",
     affiliation: "Licenciatura en Gastronomía",
     category: "Gastronomía y Maridaje",
     description:
-      "Apoya la identificación de perfiles sensoriales como sabor dominante, intensidad, textura, aroma y experiencia emocional del maridaje.",
-    image: "/members/member-5.jpg",
-    social: {
-      instagram: "#",
-    },
+      "Colaboró en la estructuración de la información gastronómica y en la elección de platillos, ingredientes y bebidas representativas, integrando elementos culturales para formular propuestas de maridaje armónicas.",
+    image: getMemberImage("luis"),
   },
   {
     id: "m6",
@@ -87,23 +80,17 @@ export const members: Member[] = [
     affiliation: "Licenciatura en Gastronomía",
     category: "Gastronomía y Maridaje",
     description:
-      "Aporta información sobre preparaciones tradicionales, ingredientes característicos y técnicas propias de las cocinas regionales.",
-    image: "/members/member-6.jpg",
-    social: {
-      instagram: "#",
-    },
+      "Aportó al desarrollo conceptual del proyecto, la organización temática y la elaboración de un documento base con platillos representativos de Colombia y México junto con sus propuestas de maridaje.",
+    image: getMemberImage("frida"),
   },
   {
     id: "m7",
     name: "Cristian Alfonso Montes Aguilera",
-    role: "Investigadora gastronómica en formación",
+    role: "Investigador gastronómico en formación",
     affiliation: "Licenciatura en Gastronomía",
     category: "Gastronomía y Maridaje",
     description:
-      "Organiza información, referencias, fichas de platillos y contenidos necesarios para fortalecer la narrativa académica del proyecto.",
-    image: "/members/member-7.jpg",
-    social: {
-      instagram: "#",
-    },
+      "Organizó información, referencias, fichas de platillos y contenidos gastronómicos necesarios para fortalecer la narrativa académica y cultural del proyecto.",
+    image: getMemberImage("cristian"),
   },
 ];

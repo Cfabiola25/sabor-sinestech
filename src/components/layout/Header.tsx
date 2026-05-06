@@ -18,6 +18,10 @@ const Header = () => {
   const firstMobileLinkRef = useRef<HTMLAnchorElement | null>(null);
   const wasOpenRef = useRef(false);
 
+  const institutionalStripHeight = 74;
+  const mainHeaderHeight = 64;
+  const totalHeaderHeight = institutionalStripHeight + mainHeaderHeight;
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -52,9 +56,12 @@ const Header = () => {
       <InstitutionalStrip />
 
       <header
-        className={`fixed left-0 right-0 top-[52px] z-50 border-b border-[#b05c2e]/10 bg-[#faf6ef]/90 backdrop-blur-2xl transition-all duration-300 ${
-          scrolled ? "bg-[#faf6ef]/95 shadow-[0_4px_32px_rgba(46,26,14,0.08)]" : ""
+        className={`fixed left-0 right-0 z-50 border-b border-[#b05c2e]/10 bg-[#faf6ef]/90 backdrop-blur-2xl transition-all duration-300 ${
+          scrolled
+            ? "bg-[#faf6ef]/95 shadow-[0_4px_32px_rgba(46,26,14,0.08)]"
+            : ""
         }`}
+        style={{ top: `${institutionalStripHeight}px` }}
       >
         <div className="mx-auto flex h-16 max-w-[1360px] items-center gap-8 px-4 md:px-8">
           <BrandLink />
@@ -66,7 +73,13 @@ const Header = () => {
             className="ml-auto hidden shrink-0 items-center gap-2 rounded-full bg-[#2e1a0e] px-5 py-2.5 font-sans text-[12.5px] font-medium tracking-[0.04em] text-[#f5e8d8] no-underline transition-all hover:-translate-y-0.5 hover:bg-[#b05c2e] hover:shadow-[0_6px_20px_rgba(176,92,46,0.28)] lg:inline-flex"
           >
             {t("header.explore")}
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              aria-hidden="true"
+            >
               <path
                 d="M3 7h8M7 3l4 4-4 4"
                 stroke="currentColor"
@@ -95,11 +108,16 @@ const Header = () => {
         </div>
 
         <AnimatePresence>
-          {open && <MobileMenu isActive={isActive} firstLinkRef={firstMobileLinkRef} />}
+          {open && (
+            <MobileMenu
+              isActive={isActive}
+              firstLinkRef={firstMobileLinkRef}
+            />
+          )}
         </AnimatePresence>
       </header>
 
-      <div className="h-[98px]" aria-hidden="true" />
+      <div style={{ height: `${totalHeaderHeight}px` }} aria-hidden="true" />
     </>
   );
 };

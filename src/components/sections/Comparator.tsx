@@ -125,9 +125,10 @@ const Comparator = () => {
 
 const HeaderBlock = () => {
   return (
-    <header className="mb-14 max-w-3xl">
+    <header className="mb-14">
       <div className="mb-5 flex items-center gap-3">
         <span className="h-[2px] w-10 bg-[#b05c2e]" />
+
         <p className="text-xs font-black uppercase tracking-[0.22em] text-[#b05c2e]">
           Comparador intercultural
         </p>
@@ -135,14 +136,15 @@ const HeaderBlock = () => {
 
       <h2
         id="comparador-title"
-        className="font-serif text-5xl font-black leading-none tracking-tight text-[#2e1a0e] md:text-7xl"
+        className="font-serif text-[clamp(3rem,6vw,5.5rem)] font-semibold leading-[0.92] tracking-[-0.04em] text-[#2e1a0e]"
       >
-        Platillos
-        <br />
-        <em className="text-[#b05c2e]">similares</em>
+        Platillos{" "}
+        <em className="italic text-[#b05c2e]">
+          similares
+        </em>
       </h2>
 
-      <p className="mt-6 text-base leading-8 text-[#7a5a48] md:text-lg">
+      <p className="mt-6 max-w-none text-[1.05rem] font-light leading-8 tracking-[-0.01em] text-[#7a5a48]">
         Explora cómo dos preparaciones de México y Colombia pueden compartir
         sabor, textura e intensidad, aunque conserven una identidad cultural
         propia.

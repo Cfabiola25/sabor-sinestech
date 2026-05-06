@@ -1,126 +1,177 @@
 # 🍽️ SaborSinestech
 
-Plataforma web interactiva que explora el **maridaje intercultural entre
-México y Colombia** a través de análisis sensorial, narrativa
-gastronómica y experiencia digital.
+Plataforma web interactiva enfocada en el **maridaje intercultural entre México y Colombia**, integrando análisis sensorial, narrativa gastronómica y experiencia digital inmersiva.
 
-Desarrollado como parte del proyecto académico **COIL (Collaborative
-Online International Learning)**.
+Desarrollado como parte del proyecto académico **COIL (Collaborative Online International Learning)**, un espacio de colaboración internacional entre instituciones de Colombia y México.
 
-------------------------------------------------------------------------
+---
 
 ## 🌎 Concepto
 
-SaborSinestech combina tecnología y cultura para analizar cómo los
-platillos de diferentes países pueden relacionarse mediante:
+**SaborSinestech** fusiona tecnología, gastronomía y cultura para explorar cómo los platillos tradicionales pueden conectarse a través de experiencias multisensoriales.
 
--   Sabor
--   Textura
--   Intensidad
--   Contexto cultural
+La plataforma analiza relaciones gastronómicas mediante factores como:
 
-------------------------------------------------------------------------
+- Sabor
+- Textura
+- Intensidad
+- Aroma
+- Afinidad cultural
+- Contexto histórico y regional
+
+El objetivo es transformar el maridaje en una experiencia digital interactiva y educativa.
+
+---
 
 ## 🚀 Funcionalidades
 
 ### 🔍 Comparador intercultural
 
-Analiza similitudes entre platillos de México y Colombia usando un
-sistema de puntuación sensorial.
+Sistema interactivo que compara platillos mexicanos y colombianos mediante un análisis de similitud sensorial y cultural.
 
 ### 🍲 Catálogo gastronómico
 
-Explora platillos típicos con información de: - Región - Sabor
-dominante - Textura - Notas secundarias
+Explora una colección de platillos típicos con información detallada sobre:
+
+- Región de origen
+- Ingredientes principales
+- Sabor dominante
+- Textura
+- Intensidad
+- Notas sensoriales secundarias
 
 ### 🧠 Motor de maridaje
 
-Sugiere combinaciones entre platillos con base en afinidad sensorial.
+Algoritmo que recomienda combinaciones gastronómicas basadas en:
 
-### 🎧 Experiencia sensorial
+- Afinidad sensorial
+- Contraste
+- Equilibrio
+- Intensidad de sabores
 
-Integración de elementos visuales, narrativos y sonoros para enriquecer
-la experiencia.
+### 🎧 Experiencia sensorial inmersiva
+
+Integración de elementos:
+
+- Visuales
+- Narrativos
+- Sonoros
+- Interactivos
+
+para enriquecer la experiencia del usuario.
 
 ### 🧩 Quiz interactivo
 
-Evalúa conocimientos sobre gastronomía intercultural.
+Sistema de preguntas dinámicas para evaluar conocimientos sobre gastronomía intercultural y maridaje.
 
-------------------------------------------------------------------------
+---
 
-## 🛠️ Tecnologías
+## 🛠️ Tecnologías utilizadas
 
--   React
--   Vite
--   Tailwind CSS
--   TypeScript
--   Framer Motion
--   Lucide Icons
+- React
+- Vite
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lucide React
 
-------------------------------------------------------------------------
+---
 
-## 📂 Estructura
+## 📂 Estructura del proyecto
 
-    src/
-     ├── assets/
-     ├── components/
-     ├── data/
-     ├── hooks/
-     ├── pages/
-     ├── services/
-     ├── utils/
+```bash
+src/
+ ├── assets/
+ ├── components/
+ ├── data/
+ ├── hooks/
+ ├── pages/
+ ├── services/
+ ├── utils/
+```
 
-------------------------------------------------------------------------
+---
 
 ## 📦 Instalación
 
-    npm install
-    npm run dev
+```bash
+npm install
+npm run dev
+```
 
-------------------------------------------------------------------------
+---
 
-## 🏗️ Build
+## 🏗️ Build de producción
 
-    npm run build
-    npm run preview
+```bash
+npm run build
+npm run preview
+```
 
-------------------------------------------------------------------------
+---
 
 ## ☁️ Deploy
 
-Configuración para Vercel / Netlify:
+Configuración preparada para:
 
-    Build: npm run build
-    Output: dist
+- Vercel
+- Netlify
 
-------------------------------------------------------------------------
+```bash
+Build Command: npm run build
+Output Directory: dist
+```
 
-## 📊 Datos
+---
 
-Los datos provienen de archivos estructurados (`dishes.ts`,
-`pairings.ts`, `quiz.ts`) generados a partir de una matriz Excel.
+## 📊 Gestión de datos
 
-------------------------------------------------------------------------
+La información gastronómica utilizada en la plataforma proviene de archivos estructurados como:
 
-## 🎓 Proyecto académico
+- `dishes.ts`
+- `pairings.ts`
+- `quiz.ts`
 
-COIL México 🇲🇽 -- Colombia 🇨🇴
+Estos datos fueron organizados a partir de matrices académicas y análisis interculturales desarrollados durante el proyecto COIL.
 
-------------------------------------------------------------------------
+---
+
+## 🎓 Proyecto académico internacional
+
+**COIL México 🇲🇽 — Colombia 🇨🇴**
+
+Proyecto interdisciplinario orientado a conectar gastronomía, cultura y tecnología mediante experiencias digitales innovadoras.
+
+---
 
 ## 👥 Equipo
 
-Desarrollado por estudiantes de Ingeniería de Software (FESC & UABC)
+Desarrollado por estudiantes de Ingeniería de Software en colaboración académica internacional entre:
 
-------------------------------------------------------------------------
+- Fundación de Estudios Superiores Comfanorte (FESC)
+- Universidad Autónoma de Baja California (UABC)
 
-## 📌 Estado
+---
 
-Versión inicial funcional (MVP)
+## 📌 Estado del proyecto
 
-------------------------------------------------------------------------
+✅ MVP funcional desarrollado  
+🚧 Proyecto en evolución y mejora continua
 
-## 💡 Autor
+---
 
-Proyecto académico SaborSinestech\
-2026
+## 💡 Autora
+
+### Nelly Fabiola Cano Oviedo
+
+- GitHub: <https://github.com/Cfabiola25>
+- LinkedIn: <https://www.linkedin.com/in/nelis250/>
+- Email: <mailto:nellycano800@gmail.com>
+
+---
+
+## 📄 Licencia
+
+Proyecto académico desarrollado con fines educativos y de investigación intercultural.
+
+© 2026 — SaborSinestech

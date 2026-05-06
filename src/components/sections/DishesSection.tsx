@@ -187,9 +187,13 @@ const DishesSection = () => {
       aria-labelledby="platillos-title"
     >
       <div className="relative z-10 mx-auto max-w-[1360px]">
-        <header className="mb-14 max-w-[720px] md:mb-16">
+        <header className="mb-14 md:mb-16">
           <div className="mb-6 flex items-center gap-3.5">
-            <span className="h-[1.5px] w-10 bg-[#b05c2e]" aria-hidden="true" />
+            <span
+              className="h-[1.5px] w-10 bg-[#b05c2e]"
+              aria-hidden="true"
+            />
+
             <p className="m-0 text-[11px] font-medium uppercase tracking-[0.22em] text-[#b05c2e]">
               Galería principal
             </p>
@@ -197,14 +201,15 @@ const DishesSection = () => {
 
           <h2
             id="platillos-title"
-            className="m-0 mb-6 font-serif text-[clamp(3rem,6vw,5.5rem)] font-semibold leading-none tracking-[-0.02em] text-[#2e1a0e]"
+            className="m-0 mb-8 font-serif text-[clamp(3rem,6vw,5.5rem)] font-semibold leading-[0.92] tracking-[-0.04em] text-[#2e1a0e]"
           >
-            Exploración de
-            <br />
-            <em className="italic text-[#b05c2e]">Platillos</em>
+            Exploración de{" "}
+            <em className="italic text-[#b05c2e]">
+              platillos
+            </em>
           </h2>
 
-          <p className="m-0 max-w-xl text-base font-light leading-7 text-[#7a5a48]">
+          <p className="m-0 max-w-none text-[1.05rem] font-light leading-8 tracking-[-0.01em] text-[#7a5a48]">
             Selecciona un platillo típico de México o Colombia para descubrir su
             perfil sensorial, su contexto cultural y un maridaje intercultural
             recomendado.

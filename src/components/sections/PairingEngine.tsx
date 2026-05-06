@@ -205,36 +205,36 @@ const PairingEngine = () => {
   };
 
   return (
-    <section
-      id="maridajes"
-      className="relative overflow-hidden bg-[#faf6ef] px-5 py-24 text-[#2e1a0e] md:px-8 md:py-28"
-      aria-labelledby="maridajes-title"
-    >
-      <div
-        className="absolute inset-0 bg-[radial-gradient(circle_at_15%_10%,rgba(176,92,46,0.14),transparent_30%),radial-gradient(circle_at_85%_20%,rgba(245,232,216,0.85),transparent_35%),radial-gradient(circle_at_50%_100%,rgba(176,92,46,0.11),transparent_35%)]"
-        aria-hidden="true"
-      />
+  <section
+    id="maridajes"
+    className="relative overflow-hidden bg-[#faf6ef] px-5 py-24 text-[#2e1a0e] md:px-8 md:py-28"
+    aria-labelledby="maridajes-title"
+  >
+    <div
+      className="absolute inset-0 bg-[radial-gradient(circle_at_15%_10%,rgba(176,92,46,0.14),transparent_30%),radial-gradient(circle_at_85%_20%,rgba(245,232,216,0.85),transparent_35%),radial-gradient(circle_at_50%_100%,rgba(176,92,46,0.11),transparent_35%)]"
+      aria-hidden="true"
+    />
 
-      <div className="relative mx-auto max-w-[1280px]">
-        <div className="mb-10 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-          <div>
-            <span className="inline-flex rounded-full border border-[#efb889] bg-[#fff2e5] px-5 py-2 text-sm font-black uppercase tracking-[0.18em] text-[#b05c2e]">
-              Sabores y texturas
-            </span>
+    <div className="relative mx-auto max-w-[1280px]">
+      <div className="mb-10 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+        <div className="w-full">
+          <span className="inline-flex rounded-full border border-[#efb889] bg-[#fff2e5] px-5 py-2 text-sm font-black uppercase tracking-[0.18em] text-[#b05c2e]">
+            Sabores y texturas
+          </span>
 
-            <h2
-              id="maridajes-title"
-              className="mt-5 max-w-3xl font-serif text-4xl font-black leading-tight tracking-tight text-[#2e1a0e] md:text-5xl"
-            >
-              Maridajes sensoriales que también se escuchan.
-            </h2>
+          <h2
+            id="maridajes-title"
+            className="mt-5 font-serif text-[clamp(3rem,6vw,5.5rem)] font-semibold leading-[0.92] tracking-[-0.04em] text-[#2e1a0e]"
+          >
+            Maridajes sensoriales{" "}
+          </h2>
 
-            <p className="mt-4 max-w-3xl text-base font-medium leading-relaxed text-[#7a5947] md:text-lg">
-              Una experiencia México–Colombia donde cada combinación tiene
-              sabor, emoción, memoria cultural y una atmósfera sonora propia.
-            </p>
-          </div>
+          <p className="mt-6 max-w-none text-[1.05rem] font-light leading-8 tracking-[-0.01em] text-[#7a5947]">
+            Una experiencia México–Colombia donde cada combinación tiene
+            sabor, emoción, memoria cultural y una atmósfera sonora propia.
+          </p>
         </div>
+      </div>
 
         <div className="mb-8 flex flex-wrap gap-3">
           {filters.map((filter) => (

@@ -25,39 +25,40 @@ const MembersSection = () => {
         aria-hidden="true"
       />
 
-      <div className="relative z-10 mx-auto max-w-[1360px]">
-        <header className="mb-16 max-w-3xl">
-          <div className="mb-6 flex items-center gap-3.5">
-            <span
-              className="block h-[1.5px] w-10 shrink-0 bg-[#b05c2e]"
-              aria-hidden="true"
-            />
+<div className="relative z-10 mx-auto max-w-[1360px]">
+  <header className="mb-16">
+    <div className="mb-6 flex items-center gap-3.5">
+      <span
+        className="block h-[1.5px] w-10 shrink-0 bg-[#b05c2e]"
+        aria-hidden="true"
+      />
 
-            <p className="m-0 text-[11px] font-medium uppercase tracking-[0.22em] text-[#b05c2e]">
-              Equipo interdisciplinario
-            </p>
-          </div>
+      <p className="m-0 text-[11px] font-medium uppercase tracking-[0.22em] text-[#b05c2e]">
+        Equipo interdisciplinario
+      </p>
+    </div>
 
-          <h2
-            id="team-title"
-            className="m-0 mb-6 font-serif text-[clamp(3rem,6vw,5.5rem)] font-semibold leading-none tracking-[-0.02em] text-[#2e1a0e]"
-          >
-            Talento que une
-            <br />
-            <em className="italic text-[#b05c2e]">tecnología y gastronomía</em>
-          </h2>
+    <h2
+      id="team-title"
+      className="m-0 mb-8 font-serif text-[clamp(3rem,6vw,5.5rem)] font-semibold leading-[0.92] tracking-[-0.04em] text-[#2e1a0e]"
+    >
+      Talento que une{" "}
+      <em className="italic text-[#b05c2e]">
+        tecnología y gastronomía
+      </em>
+    </h2>
 
-          <p className="m-0 max-w-2xl text-base font-light leading-7 text-[#7a5a48]">
-            SaborSinestech integra desarrollo web, investigación gastronómica,
-            análisis cultural y experiencia sensorial para construir una
-            plataforma intercultural México–Colombia.
-          </p>
-        </header>
+    <p className="m-0 max-w-none text-[1.05rem] font-light leading-8 tracking-[-0.01em] text-[#7a5a48]">
+      SaborSinestech integra desarrollo web, investigación gastronómica,
+      análisis cultural y experiencia sensorial para construir una
+      plataforma intercultural México–Colombia.
+    </p>
+  </header>
 
         <div className="mb-14 grid gap-5 rounded-3xl border border-[#b05c2e]/[0.12] bg-[#fffdf9] p-6 shadow-[0_20px_50px_rgba(46,26,14,0.06)] md:grid-cols-3">
           <div>
             <p className="font-serif text-4xl font-semibold text-[#2e1a0e]">
-              08
+              07
             </p>
             <p className="mt-1 text-[11px] font-medium uppercase tracking-[0.18em] text-[#b05c2e]">
               Integrantes
